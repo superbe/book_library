@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+{% block title %}<title>Главная страница частной библиотеки</title>{% endblock %}
+{% block content %}
+<h1>Частная библиотека</h1>
+  <p>Добро пажаловать в <em>Частную библиотек</em>, очень простой веб-сайт Django, разработанный в качестве учебного примера в сети разработчиков Mozilla.</p>
+<h2>Содержание</h2>
+  <p>В библиотеке имеется:</p>
+  <ul>
+    <li><strong>Книг:</strong> {{ num_books }}</li>
+    <li><strong>Экземпляров:</strong> {{ num_instances }}</li>
+    <li><strong>Экземпляров свободно:</strong> {{ num_instances_available }}</li>
+    <li><strong>Авторов:</strong> {{ num_authors }}</li>
+  </ul>
+
+<p>Вы посетили эту страницу {{ num_visits }}{% if num_visits == 1 %} раз{% else %} раза{% endif %}.</p>
+
+{% endblock %}
